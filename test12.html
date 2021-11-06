@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .story-section__view__item-img {
+      width: 100%;
+    }
+
+    .story-section__view {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .wrapper-story__list {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .wrapper-story__item {
+      display: flex;
+      align-items: center;
+      height: 700px;
+      width: 415px;
+      position: absolute;
+      left: 0px;
+      transform-origin: left center;
+      transition: ease-in 0.3s;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .story-active {
+      transform: translate(446.644px) scale(1);
+    }
+
+    .story-section__view__item--overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .story-section__view__item--overlay-header {
+      display: none;
+    }
+
+    .story-active .story-section__view__item--overlay-header {
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      align-items: center;
+      color: white;
+    }
+
+    .story-overlay_avatar {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 6px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .overlay-header {
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .story-send-message {
+      width: 298px;
+      height: 44px;
+      border-radius: 20px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      border: 1px solid #fff;
+      padding-left: 12px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .story-send-message::placeholder {
+      color: white;
+    }
+
+    .pre-story,
+    .next-story {
+      user-select: none;
+      opacity: 0;
+    }
+
+    .story-active .pre-story,
+    .story-active .next-story {
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.1s ease;
+      user-select: none;
+      background-color: rgba(224, 224, 224, 0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.4;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .story-active .pre-story:hover,
+    .story-active .next-story:hover {
+      opacity: 1;
+    }
+
+    .wrapper-story__control {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -8px;
+    }
+
+    .overlay-story__not-active {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .overlay-story__not-active__avatar {
+      border-radius: 50%;
+      width: 165px;
+      height: 165px;
+      transition: ease-in-out 0.2s ;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .story-active .overlay-story__not-active {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="story-section__view">
+    <div class="wrapper-story__list" id="wrapper-story__list">
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/162340731_924823538277965_7841674469242150898_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=m08d2Hy_86AAX8FszXP&_nc_ht=scontent.fhan3-1.fna&oh=f3c485113298d43adf8c00e0a46a1cc1&oe=619FCC35"
+          alt="img" />
+        <div class="overlay-story__not-active">
+          <div class="overlay-story__not-active__avatar"
+            style="background-image: url(https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/162340731_924823538277965_7841674469242150898_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=m08d2Hy_86AAX8FszXP&_nc_ht=scontent.fhan3-1.fna&oh=f3c485113298d43adf8c00e0a46a1cc1&oe=619FCC35);">
+          </div>
+        </div>
+        <div class="story-section__view__item--overlay">
+          <div class="story-section__view__item--overlay-header">
+            <div class="overlay-header">
+              <div class="story-overlay_avatar" style="
+                    background-image: url(https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/162340731_924823538277965_7841674469242150898_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=m08d2Hy_86AAX8FszXP&_nc_ht=scontent.fhan3-1.fna&oh=f3c485113298d43adf8c00e0a46a1cc1&oe=619FCC35);
+                  "></div>
+              <p>omrtoir88</p>
+              <span>6 giờ</span>
+            </div>
+
+            <div class="overlay-header">
+              <div>
+                <svg aria-label="Phát" class="_8-yf5" color="#ffffff" fill="#ffffff" height="16" role="img"
+                  viewBox="0 0 48 48" width="16">
+                  <path
+                    d="M9.6 46.5c-1 0-2-.3-2.9-.8-1.8-1.1-2.9-2.9-2.9-5.1V7.3c0-2.1 1.1-4 2.9-5.1 1.9-1.1 4.1-1.1 5.9 0l30.1 17.6c1.5.9 2.3 2.4 2.3 4.1 0 1.7-.9 3.2-2.3 4.1L12.6 45.7c-.9.5-2 .8-3 .8z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <svg aria-label="Video không có âm thanh." class="_8-yf5" color="#ffffff" fill="#ffffff" height="16"
+                  role="img" viewBox="0 0 48 48" width="16">
+                  <path clip-rule="evenodd"
+                    d="M42.9 24l4.6 4.6c.6.6.6 1.6 0 2.2l-1.4 1.4c-.6.6-1.6.6-2.2 0l-4.6-4.6-4.6 4.6c-.6.6-1.6.6-2.2 0l-1.4-1.4c-.6-.6-.6-1.6 0-2.2l4.6-4.6-4.6-4.6c-.6-.6-.6-1.6 0-2.2l1.4-1.4c.6-.6 1.6-.6 2.2 0l4.6 4.6 4.6-4.6c.6-.6 1.6-.6 2.2 0l1.4 1.4c.6.6.6 1.6 0 2.2L42.9 24zM24.1 47.6L11.3 34.7H1.6C.7 34.7 0 34 0 33.2V14.8c0-.8.7-1.5 1.5-1.5h9.7L24.1.4c.9-.9 2.5-.3 2.5 1v45.1c0 1.3-1.6 2-2.5 1.1z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <svg aria-label="Menu" class="_8-yf5" color="#ffffff" fill="#ffffff" height="24" role="img"
+                  viewBox="0 0 24 24" width="24">
+                  <path
+                    d="M12 9.75A2.25 2.25 0 1014.25 12 2.25 2.25 0 0012 9.75zm-6 0A2.25 2.25 0 108.25 12 2.25 2.25 0 006 9.75zm12 0A2.25 2.25 0 1020.25 12 2.25 2.25 0 0018 9.75z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper-story__control">
+            <a class="pre-story" id="pre-story">
+              < </a>
+                <a class="next-story" id="next-story"> ></a>
+          </div>
+          <!-- footer -->
+          <div class="story-section__view__item--overlay-header">
+            <input type="text" class="story-send-message" placeholder="Trả lời aido123..." />
+            <div>
+              <svg aria-label="Chia sẻ trực tiếp" class="_8-yf5" color="#dbdbdb" fill="#dbdbdb" height="24" role="img"
+                viewBox="0 0 48 48" width="24">
+                <path
+                  d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://scontent.fhan3-4.fna.fbcdn.net/v/t1.6435-9/39467321_1936866429943823_4299203967704891392_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=-2RWcy8SNiMAX8pJjhQ&_nc_ht=scontent.fhan3-4.fna&oh=1b0090ebbfc5bd83fc595058641c6f2b&oe=619D8873"
+          alt="img" />
+          <div class="overlay-story__not-active">
+            <div class="overlay-story__not-active__avatar"
+              style="background-image: url(https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/162340731_924823538277965_7841674469242150898_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=m08d2Hy_86AAX8FszXP&_nc_ht=scontent.fhan3-1.fna&oh=f3c485113298d43adf8c00e0a46a1cc1&oe=619FCC35);">
+            </div>
+          </div>
+        <div class="story-section__view__item--overlay">
+          <div class="story-section__view__item--overlay-header">
+            <div class="overlay-header">
+              <div class="story-overlay_avatar" style="
+                    background-image: url(https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/162340731_924823538277965_7841674469242150898_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=m08d2Hy_86AAX8FszXP&_nc_ht=scontent.fhan3-1.fna&oh=f3c485113298d43adf8c00e0a46a1cc1&oe=619FCC35);
+                  "></div>
+              <p>omrtoir88</p>
+              <span>6 giờ</span>
+            </div>
+
+            <div class="overlay-header">
+              <div>
+                <svg aria-label="Phát" class="_8-yf5" color="#ffffff" fill="#ffffff" height="16" role="img"
+                  viewBox="0 0 48 48" width="16">
+                  <path
+                    d="M9.6 46.5c-1 0-2-.3-2.9-.8-1.8-1.1-2.9-2.9-2.9-5.1V7.3c0-2.1 1.1-4 2.9-5.1 1.9-1.1 4.1-1.1 5.9 0l30.1 17.6c1.5.9 2.3 2.4 2.3 4.1 0 1.7-.9 3.2-2.3 4.1L12.6 45.7c-.9.5-2 .8-3 .8z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <svg aria-label="Video không có âm thanh." class="_8-yf5" color="#ffffff" fill="#ffffff" height="16"
+                  role="img" viewBox="0 0 48 48" width="16">
+                  <path clip-rule="evenodd"
+                    d="M42.9 24l4.6 4.6c.6.6.6 1.6 0 2.2l-1.4 1.4c-.6.6-1.6.6-2.2 0l-4.6-4.6-4.6 4.6c-.6.6-1.6.6-2.2 0l-1.4-1.4c-.6-.6-.6-1.6 0-2.2l4.6-4.6-4.6-4.6c-.6-.6-.6-1.6 0-2.2l1.4-1.4c.6-.6 1.6-.6 2.2 0l4.6 4.6 4.6-4.6c.6-.6 1.6-.6 2.2 0l1.4 1.4c.6.6.6 1.6 0 2.2L42.9 24zM24.1 47.6L11.3 34.7H1.6C.7 34.7 0 34 0 33.2V14.8c0-.8.7-1.5 1.5-1.5h9.7L24.1.4c.9-.9 2.5-.3 2.5 1v45.1c0 1.3-1.6 2-2.5 1.1z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <svg aria-label="Menu" class="_8-yf5" color="#ffffff" fill="#ffffff" height="24" role="img"
+                  viewBox="0 0 24 24" width="24">
+                  <path
+                    d="M12 9.75A2.25 2.25 0 1014.25 12 2.25 2.25 0 0012 9.75zm-6 0A2.25 2.25 0 108.25 12 2.25 2.25 0 006 9.75zm12 0A2.25 2.25 0 1020.25 12 2.25 2.25 0 0018 9.75z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper-story__control">
+            <a class="pre-story" id="pre-story">
+              < </a>
+                <a class="next-story" id="next-story"> ></a>
+          </div>
+          <div class="story-section__view__item--overlay-header">
+            <input type="text" class="story-send-message" placeholder="Trả lời aido123..." />
+            <div>
+              <svg aria-label="Chia sẻ trực tiếp" class="_8-yf5" color="#dbdbdb" fill="#dbdbdb" height="24" role="img"
+                viewBox="0 0 48 48" width="24">
+                <path
+                  d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://scontent.fhan3-1.fna.fbcdn.net/v/t1.6435-9/180530169_1213411065778674_3823724578701938387_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=Dx5T2WG4IRsAX8bIRu5&_nc_ht=scontent.fhan3-1.fna&oh=506f0cfdf41bf962ed7d05fc7f30b536&oe=619F7CEE"
+          alt="img" />
+      </div>
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://i.pinimg.com/564x/52/b1/18/52b1187cc7e71a968057e30c5f9b4abf.jpg" alt="img" />
+      </div>
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://scontent.fhan3-3.fna.fbcdn.net/v/t1.6435-9/84758416_647436799334072_5380195722270343168_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=19026a&_nc_ohc=uAZM2D_Z6WkAX8BzhOt&tn=HHXEkJ7i6RqnCk9B&_nc_ht=scontent.fhan3-3.fna&oh=56ff5ff9160b1b0efdddc99df9443910&oe=619EF26D"
+          alt="img" />
+      </div>
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://i.pinimg.com/564x/52/b1/18/52b1187cc7e71a968057e30c5f9b4abf.jpg" alt="img" />
+      </div>
+      <div class="wrapper-story__item">
+        <img class="story-section__view__item-img"
+          src="https://i.pinimg.com/564x/52/b1/18/52b1187cc7e71a968057e30c5f9b4abf.jpg" alt="img" />
+      </div>
+    </div>
+  </div>
+  <script>
+    const allStoryItem = document.querySelectorAll(".wrapper-story__item");
+    const positionActiveItem = 446.644;
+
+    initStory(allStoryItem);
+    clickOtherStory(allStoryItem);
+    preBtnControl();
+    nextControl();
+
+    function clickOtherStory(listStory) {
+      for (let i = 0; i < listStory.length; i++) {
+        listStory[i].addEventListener("click", (e) => {
+          if (
+            !e.target.classList.contains("pre-story") &&
+            !e.target.classList.contains("next-story")
+          ) {
+            controlStory(i);
+          }
+        });
+      }
+    }
+
+    function preBtnControl() {
+      const preBtn = document.querySelectorAll(".pre-story");
+      preBtn.forEach((ele) => {
+        ele.addEventListener("click", (e) => {
+          const wrapperImage = e.target.parentNode.parentNode.parentNode;
+          let currentIndex = 0;
+          for (let i = 0; i < allStoryItem.length; i++) {
+            if (allStoryItem[i].classList.contains("story-active")) {
+              currentIndex = i;
+              currentIndex--;
+              break;
+            }
+          }
+          if (currentIndex != -1) {
+            controlStory(currentIndex);
+          }
+        });
+      });
+    }
+
+    function nextControl() {
+      const nextBtn = document.querySelectorAll(".next-story");
+      nextBtn.forEach((ele) => {
+        ele.addEventListener("click", (e) => {
+          const wrapperImage = e.target.parentNode.parentNode.parentNode;
+          let currentIndex = 0;
+          for (let i = 0; i < allStoryItem.length; i++) {
+            if (allStoryItem[i].classList.contains("story-active")) {
+              currentIndex = i;
+              currentIndex++;
+              break;
+            }
+          }
+          if (currentIndex != allStoryItem.length) {
+            controlStory(currentIndex);
+          }
+        });
+      });
+    }
+
+    function initStory(listStory) {
+      listStory.forEach((ele) => {
+        ele.classList.remove("story-active");
+      });
+      // initial
+      listStory[0].classList.add("story-active");
+
+      for (let i = 1; i < listStory.length; i++) {
+        listStory[i].style.transform = `translate(${positionActiveItem * 2 + 200 * (i - 1)
+          }px) scale(0.4)`;
+      }
+    }
+
+    function controlStory(index) {
+      allStoryItem.forEach((ele) => {
+        ele.classList.remove("story-active");
+      });
+      // pre
+      for (let j = index - 1; j >= 0; j--) {
+        allStoryItem[j].style.transform = `translate(${positionActiveItem - 200 * (index - j)
+          }px) scale(0.4)`;
+      }
+
+      // next
+      for (let j = index + 1; j < allStoryItem.length; j++) {
+        allStoryItem[j].style.transform = `translate(${positionActiveItem * 2 + 200 * (j - index - 1)
+          }px) scale(0.4)`;
+      }
+      allStoryItem[index].style.transform = `translate(446.644px) scale(1)`;
+      allStoryItem[index].classList.add("story-active");
+    }
+  </script>
+  <!-- next story  -->
+  <script></script>
+</body>
+
+</html>
