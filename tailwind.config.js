@@ -16,7 +16,16 @@ module.exports = {
       },
       padding : {
         header_height: "var(--header-height)",
-      }
+      },
+      keyframes: {
+        showModal: {
+          '0%': { transform: 'scale(1.3)', opacity: '70%' },
+          '100%': { transform: 'scale(1)', opacity: '100%' },
+        }
+       },
+       animation: {
+        showModal: 'showModal ease-in-out .1s',
+       }
     },
   },
   variants: {

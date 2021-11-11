@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/asserts/tailwind/build/styleTailwind.css" />
+  <script src="https://kit.fontawesome.com/e0e2efc084.js" crossorigin="anonymous"></script>
+  <title>Phi Khanh Cris</title>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="profile-section bg-[#fafafa]">
+    <div class="pt-header_height w-[100%] lg:w-full max-w-[975px] mx-auto my-0 p-0 ">
+      <!-- avatar -->
+      <div class="flex mb-11">
+        <div class="w-4/12 flex justify-center">
+          <div
+            style="background-image: url(https://images.unsplash.com/photo-1494177310973-4841f7d5a882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);"
+            class="rounded-full w-[150px] h-[150px] bg-cover bg-center bg-no-repeat">
+          </div>
+
+        </div>
+        <div class="w-8/12">
+
+          <div>
+            <div class="flex items-center mb-5">
+              <span class="text-[28px] leading-8 font-light">kckatalbas</span>
+              <button class="ml-5 border border-solid border-[#b9b9b9] px-[9px] py-[5px] font-semibold rounded-md">Chỉnh
+                sửa
+                trang cá nhân</button>
+              <div class="cursor-pointer ml-4">
+                <svg aria-label="Tùy chọn" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img"
+                  viewBox="0 0 48 48" width="24">
+                  <path clip-rule="evenodd"
+                    d="M46.7 20.6l-2.1-1.1c-.4-.2-.7-.5-.8-1-.5-1.6-1.1-3.2-1.9-4.7-.2-.4-.3-.8-.1-1.2l.8-2.3c.2-.5 0-1.1-.4-1.5l-2.9-2.9c-.4-.4-1-.5-1.5-.4l-2.3.8c-.4.1-.8.1-1.2-.1-1.4-.8-3-1.5-4.6-1.9-.4-.1-.8-.4-1-.8l-1.1-2.2c-.3-.5-.8-.8-1.3-.8h-4.1c-.6 0-1.1.3-1.3.8l-1.1 2.2c-.2.4-.5.7-1 .8-1.6.5-3.2 1.1-4.6 1.9-.4.2-.8.3-1.2.1l-2.3-.8c-.5-.2-1.1 0-1.5.4L5.9 8.8c-.4.4-.5 1-.4 1.5l.8 2.3c.1.4.1.8-.1 1.2-.8 1.5-1.5 3-1.9 4.7-.1.4-.4.8-.8 1l-2.1 1.1c-.5.3-.8.8-.8 1.3V26c0 .6.3 1.1.8 1.3l2.1 1.1c.4.2.7.5.8 1 .5 1.6 1.1 3.2 1.9 4.7.2.4.3.8.1 1.2l-.8 2.3c-.2.5 0 1.1.4 1.5L8.8 42c.4.4 1 .5 1.5.4l2.3-.8c.4-.1.8-.1 1.2.1 1.4.8 3 1.5 4.6 1.9.4.1.8.4 1 .8l1.1 2.2c.3.5.8.8 1.3.8h4.1c.6 0 1.1-.3 1.3-.8l1.1-2.2c.2-.4.5-.7 1-.8 1.6-.5 3.2-1.1 4.6-1.9.4-.2.8-.3 1.2-.1l2.3.8c.5.2 1.1 0 1.5-.4l2.9-2.9c.4-.4.5-1 .4-1.5l-.8-2.3c-.1-.4-.1-.8.1-1.2.8-1.5 1.5-3 1.9-4.7.1-.4.4-.8.8-1l2.1-1.1c.5-.3.8-.8.8-1.3v-4.1c.4-.5.1-1.1-.4-1.3zM24 41.5c-9.7 0-17.5-7.8-17.5-17.5S14.3 6.5 24 6.5 41.5 14.3 41.5 24 33.7 41.5 24 41.5z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="flex text-sm mb-4">
+              <div class="mr-10"><span class="font-semibold">8</span> bài viết </div>
+              <div class="mr-10 cursor-pointer" id="follower-btn"><span class="font-semibold">29</span> người theo dõi
+              </div>
+              <div class="cursor-pointer">Đang theo dõi <span class="font-semibold">43</span> người dùng </div>
+            </div>
+            <div class="text-sm">
+              <span class="font-semibold block mb-1"> KC Katalbas</span>
+              <span>Sciencey Singer Songwriter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- story -->
+      <div>
+        <ul class="flex ml-12 overflow-x-auto">
+          <li class="mr-3.5 flex flex-col justify-center items-center w-[115px]">
+            <div class="h-[87px] w-[87px] bg-[#e9e9e9] p-1 relative flex justify-center items-center rounded-full">
+              <a href="#" class="bg-white block p-0.5 rounded-full">
+                <div class="h-[77px] w-[77px] bg-center bg-cover bg-no-repeat flex rounded-full"
+                  style="background-image: url(https://images.unsplash.com/photo-1624391673156-a7b7f6c5fb12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);">
+                </div>
+              </a>
+            </div>
+            <div class="text-center mt-4 overflow-hidden max-w-[87px] font-semibold cursor-pointer text-sm w-full">
+              Guitar</div>
+          </li>
+           <li class="mr-3.5 flex flex-col justify-center items-center w-[115px]">
+            <div class="h-[87px] w-[87px] bg-[#e9e9e9] p-1 relative flex justify-center items-center rounded-full">
+              <a href="#" class="bg-white block p-0.5 rounded-full">
+                <div class="h-[77px] w-[77px] bg-center bg-cover bg-no-repeat flex rounded-full"
+                  style="background-image: url(https://images.unsplash.com/photo-1527842891421-42eec6e703ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);">
+                </div>
+              </a>
+            </div>
+            <div class="text-center mt-4 overflow-hidden max-w-[87px] font-semibold cursor-pointer text-sm">Moon</div>
+          </li>
+           <li class="mr-3.5 flex flex-col justify-center items-center w-[115px]">
+            <div class="h-[87px] w-[87px] bg-[#e9e9e9] p-1 relative flex justify-center items-center rounded-full">
+              <a href="#" class="bg-white block p-0.5 rounded-full">
+                <div class="h-[77px] w-[77px] bg-center bg-cover bg-no-repeat flex rounded-full"
+                  style="background-image: url(https://images.unsplash.com/photo-1516822003754-cca485356ecb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);">
+                </div>
+              </a>
+            </div>
+            <div class="text-center mt-4 overflow-hidden max-w-[87px] font-semibold cursor-pointer text-sm">Pals</div>
+          </li>
+        </ul>
+      </div>
+      <!-- post and reels -->
+    </div>
+
+    <!-- follower -->
+    <!-- overlay -->
+    <div class="fixed bottom-0 top-0 right-0 left-0 bg-black bg-opacity-70 hidden items-center justify-center"
+      id="overlay_profile-follower">
+      <div class="w-[400px] h-[400px] animate-showModal bg-white rounded-xl flex flex-col" id="list_profile-follower">
+        <div class="h-[43px]  relative flex items-center justify-center border-b border-solid border-[#e0e0e0]">
+          <div class="text-center text-base font-semibold">Người theo dõi</div>
+          <div class="absolute top-2 right-4 cursor-pointer" id="btn-close_follower">
+            <svg aria-label="Đóng" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img"
+              viewBox="0 0 48 48" width="24">
+              <path clip-rule="evenodd"
+                d="M41.1 9.1l-15 15L41 39c.6.6.6 1.5 0 2.1s-1.5.6-2.1 0L24 26.1l-14.9 15c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2.1l14.9-15-15-15c-.6-.6-.6-1.5 0-2.1s1.5-.6 2.1 0l15 15 15-15c.6-.6 1.5-.6 2.1 0 .6.6.6 1.6 0 2.2z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="max-h-[90%] flex-1 rounded-xl overflow-hidden">
+          <ul class="h-full overflow-y-scroll rounded-xl">
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+            <li class="flex items-center px-4 py-2 ">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1607142426428-ce8910c7e425?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="rounded-full w-[30px] h-[30px] bg-cover bg-center bg-no-repeat mr-3.5">
+              </div>
+              <div class="flex-1 text-sm">
+                <a href="#" class=" hover:underline font-semibold leading-3 block mb-1"> cclarazen</a>
+                <span class="mt-2">Zen</span>
+              </div>
+              <div>
+                <button class="border border-solid border-[#aaa] rounded-md px-2 py-1">Xóa</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const overlayFollower = document.getElementById("overlay_profile-follower");
+  const listFollower = document.getElementById("list_profile-follower");
+  const btnCloseFollower = document.getElementById("btn-close_follower");
+  const btnFollower = document.getElementById("follower-btn");
+  btnCloseFollower.addEventListener("click", () => {
+    overlayFollower.style.display = "none";
+  })
+  overlayFollower.addEventListener("click", e => {
+    if (e.target.id == "overlay_profile-follower") {
+      overlayFollower.style.display = "none";
+    }
+  })
+  btnFollower.addEventListener("click", () => {
+    overlayFollower.style.display = "flex";
+  })
+</script>
+
+</html>
