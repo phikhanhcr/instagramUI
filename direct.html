@@ -29,16 +29,24 @@
   .my-message .report-message {
     left: -24%;
   }
+
+  @media (max-width: 767px) {
+    .message-active {
+      background-color: inherit;
+    }
+  }
 </style>
 
 <body>
   <!-- header -->
 
   <!-- main -->
-  <div class="pt-header_height w-[100%] lg:w-full max-w-[975px] mx-auto my-0 p-0 ">
-    <div class="flex border border-solid border-[#ccc] h-[700px]">
-      <div class="w-4/12 border-r border-solid border-[#ccc] h-full">
-        <div class="px-5 h-[60px] w-full flex items-center border border-solid border-[#ccc]">
+  <div class="md:pt-header_height w-[100%] lg:w-full max-w-[975px] mx-auto my-0 p-0 ">
+    <div class="flex border border-solid border-[#ccc] h-screen md:h-[700px] relative">
+      <div class="md:flex w-full md:w-4/12 border-r border-solid border-[#ccc] h-full z-0 flex-col"
+        id="direct-message__list">
+        <!-- header -->
+        <div class="md:flex hidden px-5 h-[60px] w-full items-center border border-solid border-[#ccc]">
           <div class="flex-1 text-center font-semibold text-sm flex justify-center">
             <span>phikhanhcris</span>
             <div class="ml-2">
@@ -65,9 +73,12 @@
             </svg>
           </div>
         </div>
+        <div class="h-11 w-full flex md:hidden">
 
-        <ul class="overflow-hidden overflow-y-auto h-[638px]">
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 message-active">
+        </div>
+
+        <ul class="overflow-hidden overflow-y-auto h-full md:h-[638px] flex-1">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user message-active">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -76,7 +87,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -85,7 +96,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -94,7 +105,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -103,7 +114,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -112,7 +123,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -121,7 +132,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -130,7 +141,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -139,7 +150,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -148,7 +159,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -157,7 +168,7 @@
               <div class="font-normal text-sm opacity-50">Hoạt động 2 giờ trước</div>
             </div>
           </li>
-          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 ">
+          <li class="hover:bg-gray-100 cursor-pointer flex items-center py-2 px-5 direct-message__user ">
             <div
               style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
               class="mr-3 bg-center bg-cover bg-no-repeat rounded-full w-[56px] h-[56px]"></div>
@@ -169,10 +180,20 @@
 
         </ul>
       </div>
-      <div class="w-8/12 h-full">
-        <!-- header -->
-        <div class="px-5 h-[60px] w-full flex items-center border border-solid border-[#ccc]">
 
+
+      <div class="hidden md:flex flex-col w-full md:w-8/12 h-full" id="direct-message__modal">
+        <!-- header -->
+        <div
+          class="fixed top-0 right-0 left-0 md:relative z-10 bg-white px-2 md:px-5 h-[60px] w-full flex items-center border border-solid border-[#ccc]">
+          <div class="rotate-[270deg] mr-2 cursor-pointer block md:hidden" id="direct-btn__back--list">
+            <svg aria-label="Quay lại" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img"
+              viewBox="0 0 48 48" width="24">
+              <path
+                d="M40 33.5c-.4 0-.8-.1-1.1-.4L24 18.1l-14.9 15c-.6.6-1.5.6-2.1 0s-.6-1.5 0-2.1l16-16c.6-.6 1.5-.6 2.1 0l16 16c.6.6.6 1.5 0 2.1-.3.3-.7.4-1.1.4z">
+              </path>
+            </svg>
+          </div>
           <div class="bg-center mr-3 bg-cover bg-no-repeat rounded-full w-[26px] h-[26px]"
             style="background-image: url(https://images.unsplash.com/photo-1507065938252-17f453893fc3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80);">
           </div>
@@ -196,9 +217,14 @@
           </div>
 
         </div>
-        <div class="message h-[82%] w-full">
+
+
+        <div class="message flex-1 w-full h-[60%]">
           <!-- two types of message, mine and friend's, add class  -->
-          <ul class="px-5 pt-5 w-full h-full overflow-hidden overflow-y-auto flex flex-col-reverse">
+
+          <ul
+            class="px-5 pt-[4.25rem] pb-[4.25rem] md:pb-0 md:pt-5 w-full h-full overflow-hidden overflow-y-auto flex flex-col-reverse">
+
             <li class="w-full flex justify-start items-end mb-2 group">
               <div
                 style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
@@ -206,14 +232,15 @@
               </div>
 
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
                   class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -221,7 +248,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -231,51 +258,22 @@
                 </div>
               </div>
             </li>
-
-            <li class="group w-full flex justify-start items-end mb-2 my-message">
-              <div class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar"></div>
-              <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
-                <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
-                <button
-                  class="absolute -bottom-3 hidden animate-showModal -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
-                </button>
-              </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative transition-all">
-                <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
-                  height="24" role="img" viewBox="0 0 24 24" width="24">
-                  <circle cx="12" cy="12" r="1.5"></circle>
-                  <circle cx="6.5" cy="12" r="1.5"></circle>
-                  <circle cx="17.5" cy="12" r="1.5"></circle>
-                </svg>
-                <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -right-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
-                  <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
-                  <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
-                  <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
-                  <div class="w-full absolute bottom-[-5px] left-[-100%] translate-x-[62%] z-0 report-message">
-                    <div class="w-[15px] h-[15px] m-auto bg-black rotate-[45deg]"></div>
-                  </div>
-                </div>
-              </div>
-
-            </li>
-            <li class="w-full flex justify-start items-end mb-2 group">
+            <li class="w-full flex justify-start items-end mb-2 group my-message">
               <div
                 style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
                 class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar">
               </div>
 
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
                   class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -283,7 +281,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -292,36 +290,6 @@
                   </div>
                 </div>
               </div>
-            </li>
-
-            <li class="group w-full flex justify-start items-end mb-2 my-message">
-              <div class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar"></div>
-              <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
-                <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
-                <button
-                  class="absolute -bottom-3 hidden animate-showModal -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
-                </button>
-              </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative transition-all">
-                <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
-                  height="24" role="img" viewBox="0 0 24 24" width="24">
-                  <circle cx="12" cy="12" r="1.5"></circle>
-                  <circle cx="6.5" cy="12" r="1.5"></circle>
-                  <circle cx="17.5" cy="12" r="1.5"></circle>
-                </svg>
-                <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -right-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
-                  <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
-                  <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
-                  <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
-                  <div class="w-full absolute bottom-[-5px] left-[-100%] translate-x-[62%] z-0 report-message">
-                    <div class="w-[15px] h-[15px] m-auto bg-black rotate-[45deg]"></div>
-                  </div>
-                </div>
-              </div>
-
             </li>
             <li class="w-full flex justify-start items-end mb-2 group">
               <div
@@ -330,14 +298,15 @@
               </div>
 
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
                   class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -345,7 +314,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -355,18 +324,22 @@
                 </div>
               </div>
             </li>
-
-            <li class="group w-full flex justify-start items-end mb-2 my-message">
-              <div class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar"></div>
+            <li class="w-full flex justify-start items-end mb-2 group my-message">
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar">
+              </div>
+
+              <div
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
-                  class="absolute -bottom-3 hidden animate-showModal -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative transition-all">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -374,7 +347,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -right-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -383,7 +356,6 @@
                   </div>
                 </div>
               </div>
-
             </li>
             <li class="w-full flex justify-start items-end mb-2 group">
               <div
@@ -392,14 +364,15 @@
               </div>
 
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
                   class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -407,7 +380,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -417,18 +390,22 @@
                 </div>
               </div>
             </li>
-
-            <li class="group w-full flex justify-start items-end mb-2 my-message">
-              <div class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar"></div>
+            <li class="w-full flex justify-start items-end mb-2 group my-message">
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar">
+              </div>
+
+              <div
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
-                  class="absolute -bottom-3 hidden animate-showModal -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative transition-all">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -436,7 +413,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -right-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -445,7 +422,6 @@
                   </div>
                 </div>
               </div>
-
             </li>
             <li class="w-full flex justify-start items-end mb-2 group">
               <div
@@ -454,14 +430,15 @@
               </div>
 
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
                   class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -469,7 +446,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -479,18 +456,22 @@
                 </div>
               </div>
             </li>
-
-            <li class="group w-full flex justify-start items-end mb-2 my-message">
-              <div class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar"></div>
+            <li class="w-full flex justify-start items-end mb-2 group my-message">
               <div
-                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content max-w-[244px] relative">
+                style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar">
+              </div>
+
+              <div
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
                 <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
                 <button
-                  class="absolute -bottom-3 hidden animate-showModal -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
-                  <div class="">❤️</div>
+                  class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
+                  <div class="text-xs md:text-sm">❤️</div>
                 </button>
               </div>
-              <div class="group-hover:block block self-center ml-2 mr-2 relative transition-all">
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
                 <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
                   height="24" role="img" viewBox="0 0 24 24" width="24">
                   <circle cx="12" cy="12" r="1.5"></circle>
@@ -498,7 +479,7 @@
                   <circle cx="17.5" cy="12" r="1.5"></circle>
                 </svg>
                 <div
-                  class="animate-showModal message__menu-modal absolute -top-9 -right-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
                   <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
                   <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
                   <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
@@ -507,15 +488,79 @@
                   </div>
                 </div>
               </div>
-
             </li>
+            <li class="w-full flex justify-start items-end mb-2 group">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar">
+              </div>
 
+              <div
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
+                <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
+                <button
+                  class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
+                  <div class="text-xs md:text-sm">❤️</div>
+                </button>
+              </div>
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
+                <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
+                  height="24" role="img" viewBox="0 0 24 24" width="24">
+                  <circle cx="12" cy="12" r="1.5"></circle>
+                  <circle cx="6.5" cy="12" r="1.5"></circle>
+                  <circle cx="17.5" cy="12" r="1.5"></circle>
+                </svg>
+                <div
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
+                  <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
+                  <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
+                  <div class="w-full absolute bottom-[-5px] left-[-100%] translate-x-[62%] z-0 report-message">
+                    <div class="w-[15px] h-[15px] m-auto bg-black rotate-[45deg]"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="w-full flex justify-start items-end mb-2 group my-message">
+              <div
+                style="background-image: url(https://images.unsplash.com/photo-1540804485132-9c94bcae6c66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);"
+                class="bg-cover bg-no-repeat rounded-full w-[24px] h-[24px] mr-2 mb-2 my-message__my-avatar">
+              </div>
+
+              <div
+                class="shadow-md border border-solid rounded-[22px] min-h-[54px] h-auto text-sm p-4 my-message__my-content direct-message__wrapper max-w-[244px] relative">
+                <span class="content-message break-words">rứa t đầu tư vô mà mắc cả đợt ninene mất</span>
+                <button
+                  class="absolute animate-showModal hidden -bottom-3 -left-0.5 p-1 bg-opacity-30 bg-gray-400 rounded-full ">
+                  <div class="text-xs md:text-sm">❤️</div>
+                </button>
+              </div>
+
+              <div class="hidden md:block self-center ml-2 mr-2 relative">
+                <svg aria-label="Thu hồi" class="cursor-pointer message_item-menu" color="#262626" fill="#262626"
+                  height="24" role="img" viewBox="0 0 24 24" width="24">
+                  <circle cx="12" cy="12" r="1.5"></circle>
+                  <circle cx="6.5" cy="12" r="1.5"></circle>
+                  <circle cx="17.5" cy="12" r="1.5"></circle>
+                </svg>
+                <div
+                  class="animate-showModal message__menu-modal z-10 absolute -top-9 -left-1 shadow-2xl text-white bg-black hidden text-sm font-semibold rounded-lg px-2">
+                  <span class="mr-2 py-1 cursor-pointer z-10 message-like_btn">Like</span>
+                  <span class="mr-2 py-1 cursor-pointer z-10 message-copy_btn">Copy</span>
+                  <span class="py-1 cursor-pointer z-10 message-remove_btn">Remove</span>
+                  <div class="w-full absolute bottom-[-5px] left-[-100%] translate-x-[62%] z-0 report-message">
+                    <div class="w-[15px] h-[15px] m-auto bg-black rotate-[45deg]"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
 
           </ul>
 
         </div>
         <!-- send message -->
-        <div class="h-11 p-2">
+        <div class="fixed bottom-0 right-0 left-0 md:relative bg-white h-[3.75rem] md:h-13 p-2 ">
           <div class="flex rounded-3xl items-center border border-solid border-[#ccc] px-4">
             <div class="cursor-pointer">
               <svg aria-label="Biểu tượng cảm xúc" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img"
@@ -565,7 +610,7 @@
     { message: "Perhaps", icon: null },
     { message: "Leaving", icon: null },
     { message: "Now.", icon: "heart" },
-    { message: "I'll wait outside.", icon: null },
+    { message: "I'll wait outside.", icon: "heart" },
   ]
   const allMessage = document.querySelectorAll(".content-message")
   testMessage = testMessage.reverse()
@@ -598,6 +643,7 @@
     i++;
   })
 
+  // btn like 
   const allLikeMessageIcon = document.querySelectorAll(".message-like_btn")
   allLikeMessageIcon.forEach(ele => {
     ele.addEventListener("click", (e) => {
@@ -614,6 +660,52 @@
     })
   })
 
+  const allWrapperDirectMessage = document.querySelectorAll(".direct-message__wrapper")
+  allWrapperDirectMessage.forEach(ele => {
+    var tapped = false;
+    ele.addEventListener("touchstart", function (e) {
+
+      if (!tapped) {
+        tapped = setTimeout(function () {
+          tapped = null
+        }, 300);
+      } else {
+        clearTimeout(tapped);
+        tapped = null
+        if (e.target.classList.contains("direct-message__wrapper")) {
+          e.target.lastElementChild.style.display = "block";
+        } else if (e.target.classList.contains("content-message")) {
+          e.target.nextElementSibling.style.display = "block";
+        }
+      }
+      e.preventDefault()
+    });
+
+  })
+
+  const allUserMessage = document.querySelectorAll(".direct-message__user")
+  const messageModal = document.getElementById("direct-message__modal")
+  const directMessageList = document.getElementById("direct-message__list")
+
+  allUserMessage.forEach(ele => {
+    ele.addEventListener("click", () => {
+      if (window.screen.width < 768) {
+        directMessageList.style.display = "none";
+        messageModal.style.display = "flex";
+      }
+    })
+  })
+  const btnBackListDirect = document.getElementById("direct-btn__back--list")
+  btnBackListDirect.addEventListener("click", () => {
+    if (window.screen.width < 768) {
+      directMessageList.style.display = "flex";
+      messageModal.style.display = "none";
+    }
+  })
+
+
+  // hold message on mobile copy, unsent if ( my message), report if(other's message)
+  // cancel, overlay modal
 </script>
 
 </html>

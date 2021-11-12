@@ -21,10 +21,15 @@ module.exports = {
         showModal: {
           '0%': { transform: 'scale(1.3)', opacity: '70%' },
           '100%': { transform: 'scale(1)', opacity: '100%' },
+        },
+        hideDirectModal : {
+          '0%': { transform: ' translateX(0px)',},
+          '100%': {transform: ' translateX(400px)',},
         }
        },
        animation: {
         showModal: 'showModal ease-in-out .1s',
+        hideDirectModal : "hideDirectModal ease-in-out .1s"
        }
     },
   },
