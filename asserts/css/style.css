@@ -347,6 +347,12 @@
   display: block;
 }
 
+
+.wrapper-dot {
+  display: flex;
+  justify-content: center;
+}
+
 /* modal notification */
 .history-search__item-info {
   display: flex;
